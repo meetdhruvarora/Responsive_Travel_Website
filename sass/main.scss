@@ -1,0 +1,75 @@
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "components/button";
+@import "layout/grid";
+@import "pages/home";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/cart";
+@import "components/story";
+@import "components/bg-video";
+@import "components/form";
+@import "components/footer";
+@import "layout/navigation";
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom
+    ,rgba($color-primary, 0.682),
+    rgba($color-secondary, 0.1)),
+    url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+    
+}
+
+.logo-div{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo{
+    height: 45px;
+}
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    max-width: $grid-width;
+}
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing:1.75rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+

@@ -1,0 +1,37 @@
+.footer{
+    background-color: #333;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    position: relative;
+    &-logo-box{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &-logo{
+        width: 15rem;
+        height: auto;
+    }
+    &-navigation{
+
+    }
+    &-list{
+        padding-left: 30rem;
+        padding-top: 6rem;
+        background-color: #333;
+        list-style: none;
+    }
+    &-item{
+        background-color: #333;
+    }
+    &-link{
+        text-decoration: underline;
+        color: white;
+    }
+    &-copyright{
+        padding-left: 15rem;
+        padding-top: 6rem;
+        background-color: #333;
+        color: white;
+    }
+}

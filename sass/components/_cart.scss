@@ -1,0 +1,121 @@
+.cart{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 45rem;
+   &-side{
+    height: 45rem;
+    transition: all 1.5s ease;
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 30px;
+    
+    overflow: hidden;
+    &-front{
+        &-1{
+            background-color: orange;
+            box-shadow: 0 1.5rem 4rem rgba(orange, $alpha: .5);
+        }
+        &-2{
+            background-color: yellowgreen;
+            box-shadow: 0 1.5rem 4rem rgba(yellowgreen, $alpha: .5);
+        }
+        &-3{
+            background-color: blueviolet;
+            box-shadow: 0 1.5rem 4rem rgba(blueviolet, $alpha: .5);
+        }
+        
+    }
+    &-back{
+        transform: rotateY(180deg);
+        &-1{
+            background-image: linear-gradient(to right bottom,$color-orange-light,$color-orange-dark);
+            box-shadow: 0 1.5rem 4rem rgba(orange, $alpha: .5);
+        }
+        &-2{
+            background-image: linear-gradient(to right bottom,green,greenyellow);
+            box-shadow: 0 1.5rem 4rem rgba(yellowgreen, $alpha: .5);
+        }
+
+        &-3{
+            background-image: linear-gradient(to right bottom,$color-blue-dark,$color-blue-light);
+            box-shadow: 0 1.5rem 4rem rgba(blueviolet, $alpha: .5);
+        }
+    }
+   }
+    &:hover &-side-front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &-side-back{
+        transform: rotateY(0);
+    }
+    &-pic{
+        background-size: cover;
+        height: 15rem;
+        background-blend-mode: screen;
+        clip-path: circle(72.0% at 50% 0);
+        &-1{
+            background-image: linear-gradient(to right bottom,$color-orange-light,$color-orange-dark),
+             url(../img/nat-5.jpg);
+        }
+        &-2{
+            background-image: linear-gradient(to right bottom,green,greenyellow),url(../img/nat-4.jpg);
+        }
+        &-3{
+            background-image: linear-gradient(to right bottom,$color-blue-dark,$color-blue-light),url(../img/nat-3.jpg);
+        }
+    }
+    &-heading{
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 450;
+        text-transform: uppercase;
+        color: $color-grey-light;
+        z-index: 29;
+    }
+    &-details{
+        padding: 2rem;
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                color: rgb(240, 239, 239);
+                padding: 1rem;
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-light;
+                }
+
+            }
+        }
+    }
+    &-cta{
+        position: absolute;
+        top:50%;left: 50%;
+        transform: translate(-50%,-50%);
+        .btn{
+            margin-left: 2.9rem;
+            &-3{
+                margin-left: 4.4rem;;
+            }
+        }
+    }
+    &-price-box{
+
+    }
+    &-price-only{
+        color: whitesmoke;
+        font-size: 2rem;
+        margin-bottom: -15%;
+    }
+    &-price-value{
+        color: whitesmoke;
+        font-weight: 100;
+        text-align: center;
+        font-size: 7rem;
+    }
+
+}
